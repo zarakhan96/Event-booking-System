@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Booking System</title>
+    <!-- Including my CSS styles -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts for some nice typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Our header section: logo, contact info, and buttons -->
+    <header class="header">
+        <!-- Logo with a span to make 'Events' stand out -->
+        <div class="logo">Aura<span>Events</span></div>
+        <!-- Contact information (phone and email) -->
+        <div class="contact-info">
+            <span>+92 333-12345678</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <span>info@auraevents.com</span>
+        </div>
+        <!-- Buttons for booking seats, logging in, registering, and creating an event -->
+        <div class="auth-buttons">
+            <button class="btn" id="bookSeatsBtn">Book Your Seats</button>
+            <button class="btn">Login</button>
+            <button class="btn">Register</button>
+            <button class="btn create-event-btn">Create Event</button>
+        </div>
+    </header>
+
+    <!-- Main content area -->
+    <div class="main-content">
+        <!-- Sidebar for event filtering -->
+        <aside class="sidebar">
+            <h3>Filter Events</h3>
+            <!-- The form where users can filter events -->
+            <form id="filterForm">
+                <!-- Search by event name -->
+                <div class="form-group">
+                    <label for="search">Search by Name</label>
+                    <input type="text" id="search" placeholder="Enter event name">
+                </div>
+                <!-- Filter by event type (all, paid, free) -->
+                <div class="form-group">
+                    <label for="event-type">Event Type</label>
+                    <select id="event-type">
+                        <option value="all">All</option>
+                        <option value="paid">Paid</option>
+                        <option value="free">Free</option>
+                    </select>
+                </div>
+                <!-- Filter by event date -->
+                <div class="form-group">
+                    <label for="date">Date</label>
+                    <input type="date" id="date">
+                </div>
+                <!-- Button to apply the filters -->
+                <button type="submit" class="btn apply-filters-btn">Apply Filters</button>
+            </form>
+        </aside>
+
+        <!-- Section that lists all the upcoming events -->
+        <section class="events-listing">
+            <h2>Upcoming Events</h2>
+            <!-- Grid container for displaying event cards -->
+            <div class="events-grid" id="eventsGrid"></div>
+        </section>
+    </div>
+
+    <!-- Modal for the booking form -->
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <!-- Close button for the modal -->
+            <span class="close-btn" id="closeModal">&times;</span>
+            <h2>Book Your Tickets</h2>
+            <!-- Form for booking tickets -->
+            <form id="bookingForm">
+                <!-- Input for user's name -->
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="Your Name" required>
+                </div>
+                <!-- Input for the event name -->
+                <div class="form-group">
+                    <label for="event">Name of Event</label>
+                    <input type="text" id="event" placeholder="Event name" required>
+                </div>
+                <!-- Input for user's contact information -->
+                <div class="form-group">
+                    <label for="contact">Contact Information</label>
+                    <input type="text" id="contact" placeholder="Your Contact Info" required>
+                </div>
+                <!-- Input for the number of seats the user wants to book -->
+                <div class="form-group">
+                    <label for="seats">Number of Seats</label>
+                    <input type="number" id="seats" placeholder="Number of Seats" required>
+                </div>
+                <!-- Button to submit the booking form -->
+                <button type="submit" class="btn submit-booking-btn">Book Now</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Linking to my JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>

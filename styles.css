@@ -1,0 +1,351 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; /* Nice, clean font*/
+}
+
+/* Basic styling for the body */
+body {
+    background-color: #f8f9fa; /* Soft light gray for the background */
+    line-height: 1.6; /* Improving readability */
+}
+
+/* Header styling */
+.header {
+    background-color: #ffffff; /* Classic white background for the header */
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between; /* Space out the logo and contact info */
+    align-items: center;
+    border-bottom: 1px solid #e1e1e1; /* Subtle bottom border */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Slight shadow for some depth */
+}
+
+/* Styling for the logo */
+.logo {
+    font-size: 28px; /* Larger font size for the logo */
+    font-weight: 700; /* Making it bold */
+    color: #da8ee7; /* Soft purple for the main text */
+}
+
+/* A more vibrant purple for the 'Events' part of the logo */
+.logo span {
+    color: #a000c8;
+}
+
+/* Contact info styling in the header */
+.contact-info {
+    font-size: 14px; /* Slightly smaller text */
+    color: #888888; /* Light gray for a less prominent look */
+}
+
+/* Button styles in the header */
+.auth-buttons .btn {
+    background-color: #a000c8; /* Main button color */
+    color: #ffffff; /* White text */
+    border: none; /* Removing the border */
+    padding: 10px 20px; /* Nice padding for a clickable button */
+    border-radius: 4px; /* Slightly rounded corners */
+    cursor: pointer;
+    margin-left: 10px; /* Adding space between buttons */
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+/* Darker purple on hover for buttons */
+.auth-buttons .btn:hover {
+    background-color: #4b0068;
+}
+
+/* Specific styling for the 'Create Event' button */
+.create-event-btn {
+    background-color: #28a745; /* Green for a call to action */
+}
+
+/* Darker green on hover for the 'Create Event' button */
+.create-event-btn:hover {
+    background-color: #218838;
+}
+
+/* Main content area */
+.main-content {
+    display: flex; /* Flexbox layout */
+    margin: 30px 20px; /* Margin around the content */
+    gap: 20px; /* Space between sidebar and events listing */
+    flex-wrap: wrap; /* Wrapping elements to fit smaller screens */
+}
+
+/* Sidebar styling */
+.sidebar {
+    width: 250px; /* Fixed width for the sidebar */
+    background-color: #ffffff; /* White background */
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Light shadow for a pop */
+}
+
+/* Sidebar title */
+.sidebar h3 {
+    font-size: 20px; /* Decent size for a heading */
+    margin-bottom: 20px;
+    color: #333; /* Dark gray text */
+}
+
+/* Form group styling */
+.form-group {
+    margin-bottom: 15px; /* Space between form elements */
+}
+
+/* Labels in the form */
+.form-group label {
+    display: block;
+    font-weight: 600; /* Bold labels */
+    margin-bottom: 5px;
+    color: #555; /* Medium gray for text */
+}
+
+/* Input fields and select dropdowns */
+.form-group input,
+.form-group select {
+    width: 100%; /* Full width input fields */
+    padding: 10px;
+    border-radius: 4px; /* Slightly rounded corners */
+    border: 1px solid #cccccc; /* Light gray border */
+    font-size: 14px;
+}
+
+/* Apply Filters button */
+.apply-filters-btn {
+    background-color: #a000c8; /* Main purple color */
+    color: #ffffff; /* White text */
+    border: none;
+    padding: 12px;
+    width: 100%; /* Full width button */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+/* Darker purple on hover */
+.apply-filters-btn:hover {
+    background-color: #4b0068;
+}
+
+/* Events listing area */
+.events-listing {
+    flex: 1; /* Take up available space */
+    min-width: 0; /* Prevent overflowing */
+}
+
+/* Events listing title */
+.events-listing h2 {
+    font-size: 28px; /* Larger title */
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Events grid layout */
+.events-grid {
+    display: grid; /* Grid layout for events */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Space between grid items */
+}
+
+/* Individual event cards */
+.event-card {
+    background-color: #ffffff; /* White background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Light shadow */
+    overflow: hidden; /* Hide overflow */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+/* Lift the card on hover */
+.event-card:hover {
+    transform: translateY(-5px); /* Slight lift */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* Deeper shadow */
+}
+
+/* Event card image styling */
+.event-card img {
+    width: 100%; /* Full width image */
+    height: 180px; /* Fixed height */
+    object-fit: cover; /* Cover the area without distortion */
+}
+
+/* Event info section */
+.event-info {
+    padding: 15px;
+}
+
+/* Event title */
+.event-info h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Event description */
+.event-info p {
+    font-size: 14px;
+    color: #555555; /* Gray text */
+    margin-bottom: 5px;
+}
+
+/* Price info */
+.price {
+    color: #a000c8; /* Purple for price */
+    font-weight: 600; /* Bold */
+}
+
+/* Status info (e.g., Paid/Free) */
+.status {
+    color: #28a745; /* Green for status */
+    font-weight: 600; /* Bold */
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed position */
+    z-index: 1000; /* On top of other content */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Scroll if needed */
+    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay */
+    backdrop-filter: blur(5px); /* Blurred background */
+    padding-top: 60px; /* Space at the top */
+}
+
+.modal-content {
+    background-color: #ffffff; /* White box */
+    margin: 5% auto; /* Centered */
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners */
+    width: 90%;
+    max-width: 500px; /* Max width */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); /* Shadow */
+    position: relative; /* Position for close button */
+    text-align: center;
+}
+
+.close-btn {
+    color: #aaa; /* Light gray */
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 28px; /* Larger close button */
+    font-weight: bold;
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+/* Close button hover effect */
+.close-btn:hover,
+.close-btn:focus {
+    color: black; /* Turn black on hover */
+    text-decoration: none;
+    cursor: pointer; /* Pointer cursor */
+}
+
+/* General button styling */
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* View details button */
+.view-details-btn {
+    background-color: #a000c8; /* Main purple */
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+/* Darker purple on hover for details button */
+.view-details-btn:hover {
+    background-color: #4b0068; 
+}
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+/*modal content styling*/
+.modal-content {
+    background-color: #fff;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+/*form group styling*/
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+/*submit button styling*/
+
+.submit-booking-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #07b42a;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-booking-btn:hover {
+    background-color: #07590c;
+}
